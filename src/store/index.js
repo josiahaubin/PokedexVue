@@ -23,12 +23,20 @@ export default new Vuex.Store({
   },
   actions: {
     async getTopPokemon({ commit, dispatch }) {
-      let res = await pokeApi.get('')
-      commit("setTopPokemon", res.data.results)
+      try {
+        let res = await pokeApi.get('')
+        commit("setTopPokemon", res.data.results)
+      } catch (error) {
+        console.log(error)
+      }
     },
     async getPokemon({ commit, dispatch }, payload) {
-      let res = await pokeApi.get(payload)
-      commit("setActivePokemon", res.data)
+      try {
+        let res = await pokeApi.get(payload)
+        commit("setActivePokemon", res.data)
+      } catch (error) {
+        alert("Pokemon not found");
+      }
     }
   }
 })

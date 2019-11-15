@@ -3,9 +3,19 @@
     <div class="row justify-content-center">
       <div class="col-12 col-md-6 mt-3">
         <div class="input-group mb-3 shadow">
-          <input type="text" class="form-control" placeholder="Search for a Pokemon" />
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search for a Pokemon"
+            v-model="query"
+          />
           <div class="input-group-append">
-            <button class="btn btn-success" type="button" id="search">Search</button>
+            <button
+              class="btn btn-success"
+              type="button"
+              id="search"
+              @click="searchPokemon()"
+            >Search</button>
           </div>
         </div>
       </div>
@@ -33,6 +43,11 @@ export default {
   mounted() {
     return this.getTopPokemon();
   },
+  data() {
+    return {
+      query: ""
+    };
+  },
   computed: {
     topPokemon() {
       return this.$store.state.topPokemon;
@@ -41,6 +56,10 @@ export default {
   methods: {
     getTopPokemon() {
       this.$store.dispatch("getTopPokemon");
+    },
+    searchPokemon() {
+      this.$store.dispatch("getPokemon", this.query);
+      this.query = "";
     }
   },
   components: { Pokemon, ActivePokemon }
