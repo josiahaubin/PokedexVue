@@ -58,6 +58,7 @@ export default {
       this.$store.dispatch("getTopPokemon");
     },
     searchPokemon() {
+      this.query = this.query.toLowerCase();
       this.$store.dispatch("getPokemon", this.query);
       this.query = "";
     }
