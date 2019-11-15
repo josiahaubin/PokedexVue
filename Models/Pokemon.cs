@@ -6,5 +6,7 @@ namespace pokedexvue.Models
     public string Name { get; set; }
     public int Height { get; set; }
     public int Weight { get; set; }
+
+    public string Img { get; set; }
   }
 }

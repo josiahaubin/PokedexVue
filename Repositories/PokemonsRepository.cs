@@ -18,5 +18,17 @@ namespace pokedexvue.Repositories
       string sql = "SELECT * FROM pokemon";
       return _db.Query<Pokemon>(sql);
     }
+
+    public int Create(Pokemon newPokemon)
+    {
+      string sql = @"
+        INSERT INTO pokemon
+        (name, height, weight, img)
+        VALUES
+        (@Name, @Height, @Weight, @Img);
+        SELECT LAST_INSERT_ID();
+      ";
+      return _db.ExecuteScalar<int>(sql, newPokemon);
+    }
   }
 }

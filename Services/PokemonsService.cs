@@ -17,5 +17,12 @@ namespace pokedexvue.Services
     {
       return _repo.Get();
     }
+
+    public Pokemon Post(Pokemon newPokemon)
+    {
+      int id = _repo.Create(newPokemon);
+      newPokemon.Id = id;
+      return newPokemon;
+    }
   }
 }
