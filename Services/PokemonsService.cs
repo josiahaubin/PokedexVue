@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using pokedexvue.Models;
 using pokedexvue.Repositories;
 
 namespace pokedexvue.Services
@@ -8,6 +11,11 @@ namespace pokedexvue.Services
     public PokemonsService(PokemonsRepository repo)
     {
       _repo = repo;
+    }
+
+    public IEnumerable<Pokemon> Get()
+    {
+      return _repo.Get();
     }
   }
 }
