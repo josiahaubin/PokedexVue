@@ -46,3 +46,6 @@ export default {
   components: { Pokemon, ActivePokemon }
 };
 </script>
+
+<style scoped>
+</style>

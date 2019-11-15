@@ -1,12 +1,14 @@
 <template>
   <div class="ActivePokemon">
-    <div class="card">
+    <div class="card shadow">
       <img :src="pokemon.sprites.front_default" class="card-img-top" />
       <div class="card-body">
         <h2 class="card-title">{{pokemon.name}}</h2>
-
+        <h5>Height: {{pokemon.height}} -- Weight: {{pokemon.weight}}</h5>
+        <br />
+        <h5>Moves:</h5>
         <ol>
-          <li v-for="move in pokemon.moves" :key="move.id">{{move.move.name}}</li>
+          <li v-for="move in pokemon.moves" :key="move.id" class="text-left">{{move.move.name}}</li>
         </ol>
       </div>
     </div>
@@ -17,6 +19,7 @@
 <script>
 export default {
   name: "ActivePokemon",
+  mounted() {},
   data() {
     return {};
   },
