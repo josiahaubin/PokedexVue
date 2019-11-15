@@ -18,3 +18,6 @@ c:\source\codeworks\pokedexvue\obj\Debug\netcoreapp3.0\pokedexvue.AssemblyInfo.c
 c:\source\codeworks\pokedexvue\obj\Debug\netcoreapp3.0\pokedexvue.RazorTargetAssemblyInfo.cache
 c:\source\codeworks\pokedexvue\obj\Debug\netcoreapp3.0\pokedexvue.dll
 c:\source\codeworks\pokedexvue\obj\Debug\netcoreapp3.0\pokedexvue.pdb
+c:\source\codeworks\pokedexvue\bin\Debug\netcoreapp3.0\Dapper.dll
+c:\source\codeworks\pokedexvue\bin\Debug\netcoreapp3.0\MySqlConnector.dll
+C:\source\codeworks\pokedexvue\obj\Debug\netcoreapp3.0\pokedexvue.csproj.CopyComplete

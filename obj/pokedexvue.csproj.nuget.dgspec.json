@@ -51,7 +51,7 @@
             },
             "mysqlconnector": {
               "target": "Package",
-              "version": "(, )"
+              "version": "[0.61.0, )"
             }
           },
           "imports": [

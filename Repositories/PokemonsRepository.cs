@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using Dapper;
 using pokedexvue.Models;
 
 namespace pokedexvue.Repositories
@@ -14,7 +15,8 @@ namespace pokedexvue.Repositories
     }
     public IEnumerable<Pokemon> Get()
     {
-      throw new NotImplementedException();
+      string sql = "SELECT * FROM pokemon";
+      return _db.Query<Pokemon>(sql);
     }
   }
 }

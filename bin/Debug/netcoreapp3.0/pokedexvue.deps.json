@@ -24,6 +24,9 @@
     ".NETCoreApp,Version=v3.0": {
       "pokedexvue/1.0.0": {
         "dependencies": {
+          "Dapper": "2.0.30",
+          "mysql": "5.5.14.1",
+          "MySqlConnector": "0.61.0",
           "Microsoft.AspNetCore.Antiforgery": "3.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.0.0.0",
@@ -233,7 +236,7 @@
           "System.Reflection": "4.2.1.0",
           "System.Reflection.Emit": "4.1.1.0",
           "System.Reflection.Emit.ILGeneration": "4.1.0.0",
-          "System.Reflection.Emit.Lightweight": "4.1.0.0",
+          "System.Reflection.Emit.Lightweight.Reference": "4.1.0.0",
           "System.Reflection.Extensions": "4.1.1.0",
           "System.Reflection.Metadata": "1.4.4.0",
           "System.Reflection.Primitives": "4.1.1.0",
@@ -314,6 +317,38 @@
           "pokedexvue.dll": {}
         }
       },
+      "chocolatey/0.9.8.3": {},
+      "Dapper/2.0.30": {
+        "dependencies": {
+          "System.Reflection.Emit.Lightweight": "4.6.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Dapper.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.30.32292"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Dapper.dll": {}
+        }
+      },
+      "mysql/5.5.14.1": {
+        "dependencies": {
+          "chocolatey": "0.9.8.3"
+        }
+      },
+      "MySqlConnector/0.61.0": {
+        "runtime": {
+          "lib/netcoreapp3.0/MySqlConnector.dll": {
+            "assemblyVersion": "0.61.0.0",
+            "fileVersion": "0.61.0.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/MySqlConnector.dll": {}
+        }
+      },
+      "System.Reflection.Emit.Lightweight/4.6.0": {},
       "Microsoft.AspNetCore.Antiforgery/3.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Antiforgery.dll": {}
@@ -1568,7 +1603,7 @@
         },
         "compileOnly": true
       },
-      "System.Reflection.Emit.Lightweight/4.1.0.0": {
+      "System.Reflection.Emit.Lightweight.Reference/4.1.0.0": {
         "compile": {
           "System.Reflection.Emit.Lightweight.dll": {}
         },
@@ -2013,6 +2048,41 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "chocolatey/0.9.8.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Vnh4z2rilpXn9mUm9tFXj1Sxt+HSCemrm/znxDL0HFO50HvtJuRRQ0SQnLzt/Po3UjmJvnfQk5z6bJY/2doJrQ==",
+      "path": "chocolatey/0.9.8.3",
+      "hashPath": "chocolatey.0.9.8.3.nupkg.sha512"
+    },
+    "Dapper/2.0.30": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nL0VEpvunjIQ3jTI1x27b7BS3BnRnn5b2vhxsU2pWEd9SljF5WUQLoV/83qXTm0yaHmejRV/ndI3EApGlrgPqw==",
+      "path": "dapper/2.0.30",
+      "hashPath": "dapper.2.0.30.nupkg.sha512"
+    },
+    "mysql/5.5.14.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-x5XrAlCImJ7KmgzSsbgiUIqq70N08riTAARfECjO4TdzBy5gwS1dGkki0oFfHAPvmYi8dMX/lhzsEvakXEadOA==",
+      "path": "mysql/5.5.14.1",
+      "hashPath": "mysql.5.5.14.1.nupkg.sha512"
+    },
+    "MySqlConnector/0.61.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-E01yibVzCkVOmhNsUb+B4amjQKfKFlGiR1huNd6Q8aTCqBrACo0I3JMKvJBMpZfYhAsR8bqB9496PwcGpr+LuQ==",
+      "path": "mysqlconnector/0.61.0",
+      "hashPath": "mysqlconnector.0.61.0.nupkg.sha512"
+    },
+    "System.Reflection.Emit.Lightweight/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-j/V5HVvxvBQ7uubYD0PptQW2KGsi1Pc2kZ9yfwLixv3ADdjL/4M78KyC5e+ymW612DY8ZE4PFoZmWpoNmN2mqg==",
+      "path": "system.reflection.emit.lightweight/4.6.0",
+      "hashPath": "system.reflection.emit.lightweight.4.6.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Antiforgery/3.0.0.0": {
       "type": "referenceassembly",
@@ -3059,7 +3129,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Reflection.Emit.Lightweight/4.1.0.0": {
+    "System.Reflection.Emit.Lightweight.Reference/4.1.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
