@@ -13,14 +13,29 @@
     <div class="row mt-4">
       <div class="col-12 col-md-6">
         <h3>Top 20 Pokemon</h3>
+        <Pokemon v-for="pokemon in topPokemon" :key="pokemon.id" :pokeProp="pokemon" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Pokemon from "../components/Pokemon";
 export default {
   name: "home",
-  components: {}
+  mounted() {
+    return this.getTopPokemon();
+  },
+  computed: {
+    topPokemon() {
+      return this.$store.state.topPokemon;
+    }
+  },
+  methods: {
+    getTopPokemon() {
+      this.$store.dispatch("getTopPokemon");
+    }
+  },
+  components: { Pokemon }
 };
 </script>
