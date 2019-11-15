@@ -5,6 +5,7 @@
       <div class="card-body">
         <h2 class="card-title">{{pokemon.name}}</h2>
         <h5>Height: {{pokemon.height}} -- Weight: {{pokemon.weight}}</h5>
+        <button class="btn btn-outline-success my-2">Save Pokemon</button>
         <br />
         <h5>Moves:</h5>
         <ol>
