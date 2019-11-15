@@ -41,5 +41,18 @@ namespace pokedexvue.Controllers
         return BadRequest(e.Message);
       }
     }
+
+    [HttpDelete("{id}")] //NOTE REMOVES THE POKEMON
+    public ActionResult<string> Delete(int id)
+    {
+      try
+      {
+        return Ok(_ps.Delete(id));
+      }
+      catch (Exception e)
+      {
+        return BadRequest(e.Message);
+      }
+    }
   }
 }

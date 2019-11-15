@@ -24,5 +24,11 @@ namespace pokedexvue.Services
       newPokemon.Id = id;
       return newPokemon;
     }
+
+    public string Delete(int id)
+    {
+      _repo.Delete(id);
+      return "Successfully Removed";
+    }
   }
 }

@@ -30,5 +30,11 @@ namespace pokedexvue.Repositories
       ";
       return _db.ExecuteScalar<int>(sql, newPokemon);
     }
+
+    public void Delete(int id)
+    {
+      string sql = "DELETE FROM pokemon WHERE id = @id";
+      _db.Execute(sql, new { id });
+    }
   }
 }
