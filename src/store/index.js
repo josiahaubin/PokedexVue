@@ -8,10 +8,15 @@ let pokeApi = axios.create({
   baseURL: "https://pokeapi.co/api/v2/pokemon/"
 })
 
+let serverApi = axios.create({
+  baseURL: "https://localhost:5001/api/pokemons"
+})
+
 export default new Vuex.Store({
   state: {
     topPokemon: [],
-    activePokemon: {}
+    activePokemon: {},
+    pokedex: []
   },
   mutations: {
     setTopPokemon(state, payload) {
@@ -19,6 +24,9 @@ export default new Vuex.Store({
     },
     setActivePokemon(state, payload) {
       state.activePokemon = payload
+    },
+    setPokedex(state, payload) {
+      state.pokedex = payload;
     }
   },
   actions: {
@@ -36,6 +44,22 @@ export default new Vuex.Store({
         commit("setActivePokemon", res.data)
       } catch (error) {
         alert("Pokemon not found");
+      }
+    },
+    async getPokedex({ commit, dispatch }) {
+      try {
+        let res = await serverApi.get('');
+        commit("setPokedex", res.data)
+      } catch (error) {
+        console.log(error)
+      }
+    },
+    async savePokemon({ commit, dispatch }, payload) {
+      try {
+        let res = await serverApi.post("", payload)
+        dispatch("getPokedex")
+      } catch (error) {
+        console.log(error)
       }
     }
   }
