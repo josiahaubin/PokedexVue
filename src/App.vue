@@ -6,7 +6,7 @@
         alt="Pokemon Logo"
       />
       <router-link to="/" class="mx-5">Home</router-link>
-      <router-link to="/pokedex" class="mx-5">My Pokedex</router-link>
+      <router-link to="/pokedex">My Pokedex</router-link>
     </div>
     <router-view />
   </div>

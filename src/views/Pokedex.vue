@@ -1,9 +1,19 @@
 <template>
-  <div class="Pokedex"></div>
+  <div class="Pokedex container-fluid">
+    <div class="row mt-3">
+      <div class="col-12">
+        <h3>My Pokedex</h3>
+      </div>
+    </div>
+    <div class="row">
+      <PokedexPokemon v-for="pokemon in pokedex" :key="pokemon.id" :pokeProp="pokemon" />
+    </div>
+  </div>
 </template>
 
 
 <script>
+import PokedexPokemon from "../components/PokedexPokemon";
 export default {
   name: "Pokedex",
   mounted() {
@@ -22,10 +32,13 @@ export default {
       this.$store.dispatch("getPokedex");
     }
   },
-  components: {}
+  components: { PokedexPokemon }
 };
 </script>
 
 
 <style scoped>
+.Pokedex {
+  min-height: 86vh;
+}
 </style>
