@@ -35,7 +35,7 @@ export default {
         Name: this.pokemon.name,
         Height: this.pokemon.height,
         Weight: this.pokemon.weight,
-        Img: this.pokemon.sprities.front_default
+        Img: this.pokemon.sprites.front_default
       });
     }
   },

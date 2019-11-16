@@ -64,6 +64,11 @@ namespace pokedexvue
       if (env.IsDevelopment())
       {
         app.UseDeveloperExceptionPage();
+        app.UseCors("CorsDevPolicy");
+      }
+      else
+      {
+        app.UseHsts();
       }
 
       app.UseHttpsRedirection();

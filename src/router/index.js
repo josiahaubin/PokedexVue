@@ -11,13 +11,13 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'about',
+    path: '/pokedex',
+    name: 'pokedex',
     // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
+    // this generates a separate chunk (pokedex.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: function () {
-      return import(/* webpackChunkName: "about" */ '../views/Home.vue')
+      return import(/* webpackChunkName: "pokedex" */ '../views/Pokedex.vue')
     }
   }
 ]

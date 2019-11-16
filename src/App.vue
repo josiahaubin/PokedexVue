@@ -5,6 +5,8 @@
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png"
         alt="Pokemon Logo"
       />
+      <router-link to="/" class="mx-5">Home</router-link>
+      <router-link to="/pokedex" class="mx-5">My Pokedex</router-link>
     </div>
     <router-view />
   </div>
@@ -34,7 +36,7 @@
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: white;
 }
 
 #nav a.router-link-exact-active {
